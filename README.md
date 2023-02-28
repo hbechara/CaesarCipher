@@ -20,3 +20,20 @@ to easily perform the wrap around at the end of the alphabet. For 26 mod 26 is
 0, 27 mod 26 is 1, and 28 mod 26 is 2. The decryption algorithm for the Caesar
 cipher is just the opposite—we replace each letter with the one r places before it,
 with wrap around (that is, letter i is replaced by letter (i−r) mod 26).
+
+
+Sample Test
+```
+cipher = CaesarCipher(3)
+message = "THE EAGLE IS IN PLAY; MEET AT JOE'S"
+coded = cipher.encrypt(message)
+print("Secret: ", coded)
+answer = cipher.decrypt(coded)
+print("Message: ", answer)
+```
+
+Sample Output:
+```
+Secret:  WKH HDJOH LV LQ SODB; PHHW DW MRH'V
+Message:  THE EAGLE IS IN PLAY; MEET AT JOE'S
+```
